@@ -1,20 +1,22 @@
-package it.maior.jira.exporter;
+package it.maior.jira.application;
 
 import it.maior.docx.DocxFileCreator;
 import it.maior.docx.ParagraphStyle;
 import it.maior.jira.Backlog;
 import it.maior.jira.JiraIssue;
-import it.maior.jira.docx.EpicTestPlanExporter;
+import it.maior.jira.docx.EpicDocxExporter;
+
 import it.maior.jira.extractor.JiraClientFactory;
 
 import java.util.Arrays;
 
 import static it.maior.jira.exporter.Phase.*;
 
-public class TestPlanExporter {
+public class SystemDesignExporter {
 
     public static void main(String[] args) {
-        final Backlog backlog = JiraClientFactory.createMyJiraClient().retrieveBacklog();
+
+        final Backlog backlog =  JiraClientFactory.createMyJiraClient().retrieveBacklog();
 
         final DocxFileCreator docxFileCreator = new DocxFileCreator();
 
@@ -22,12 +24,12 @@ public class TestPlanExporter {
                 phase -> {
                     writePhase(docxFileCreator, phase.getDescription());
                     backlog.getEpics().stream()
-                            .forEach(epic -> new EpicTestPlanExporter(epic, docxFileCreator, (JiraIssue i) -> i.getPhase().equals(phase.getValue())).export());
+                            .forEach(epic -> new EpicDocxExporter(epic, docxFileCreator, (JiraIssue i) -> i.getPhase().equals(phase.getValue())).export());
                 }
         );
 
 
-        docxFileCreator.saveFileDocx("./output/testPlan.docx");
+        docxFileCreator.saveFileDocx("./output/backlog.docx");
     }
 
     private static void writePhase(DocxFileCreator docxFileCreator, String phase) {
