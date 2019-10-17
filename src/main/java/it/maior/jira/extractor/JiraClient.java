@@ -48,16 +48,16 @@ public class JiraClient {
         issueClient = restClient.getIssueClient();
     }
 
-    public Backlog _retrieveBacklog() {
-        final List<Issue> issues = retrieveIssues();
-
-        return issues.stream()
-                .parallel()
-                .map(issue -> toJiraIssue(issue, ""))
-                .sorted(Comparator.comparing(JiraIssue::getEpic))
-                .collect(() -> new Backlog(), (backlog, epic) -> backlog.addIssue(epic), (backlog1, backlog2) -> backlog1.mergeWith(backlog2));
-
-    }
+//    public Backlog _retrieveBacklog() {
+//        final List<Issue> issues = retrieveIssues();
+//
+//        return issues.stream()
+//                .parallel()
+//                .map(issue -> toJiraIssue(issue, ""))
+//                .sorted(Comparator.comparing(JiraIssue::getEpic))
+//                .collect(() -> new Backlog(), (backlog, epic) -> backlog.addIssue(epic), (backlog1, backlog2) -> backlog1.mergeWith(backlog2));
+//
+//    }
 
     public Backlog retrieveBacklog() {
         final List<Issue> epics = retrieveEpics();
