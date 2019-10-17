@@ -27,7 +27,7 @@ public class TestPlanExporter {
         );
 
 
-        docxFileCreator.saveFileDocx("./testPlan.docx");
+        docxFileCreator.saveFileDocx("./output/testPlan.docx");
     }
 
     private static void writePhase(DocxFileCreator docxFileCreator, String phase) {

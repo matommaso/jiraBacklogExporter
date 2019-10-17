@@ -111,7 +111,9 @@ class BacklogItemDocxExporter(val issue: BacklogItem, val docxFileCreator: DocxF
   private def createBulletPoint(text: String) = {
     def removeMetadataPrefixToDescribeBulletList(text: String, level: Int) = text.substring(level).trim
 
-    val level = text.chars.takeWhile((c: Int) => c == '*' || c == '#').count.toInt
+//    val level = text.chars.takeWhile((c: Int) => c == '*' || c == '#').count.toInt
+    val level = 1; //TODO
+
     val actualTextOfBulletListItem = removeMetadataPrefixToDescribeBulletList(text, level)
     docxFileCreator.createBulletParagraphOfText(1, level, actualTextOfBulletListItem)
   }

@@ -5,6 +5,7 @@ import it.maior.docx.ParagraphStyle;
 import it.maior.jira.Backlog;
 import it.maior.jira.JiraIssue;
 import it.maior.jira.docx.EpicDocxExporter;
+
 import it.maior.jira.extractor.JiraClientFactory;
 
 import java.util.Arrays;
@@ -14,7 +15,8 @@ import static it.maior.jira.exporter.Phase.*;
 public class SystemDesignExporter {
 
     public static void main(String[] args) {
-        final Backlog backlog = JiraClientFactory.createMyJiraClient().retrieveBacklog();
+
+        final Backlog backlog =  JiraClientFactory.createMyJiraClient().retrieveBacklog();
 
         final DocxFileCreator docxFileCreator = new DocxFileCreator();
 
@@ -27,7 +29,7 @@ public class SystemDesignExporter {
         );
 
 
-        docxFileCreator.saveFileDocx("./backlog.docx");
+        docxFileCreator.saveFileDocx("./output/backlog.docx");
     }
 
     private static void writePhase(DocxFileCreator docxFileCreator, String phase) {

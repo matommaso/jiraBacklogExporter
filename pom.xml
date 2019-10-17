@@ -127,7 +127,7 @@
                 <configuration>
                     <toolchains>
                         <jdk>
-                            <version>10</version>
+                            <version>11.0.3</version>
                             <vendor>OpenJDK</vendor>
                         </jdk>
                     </toolchains>
