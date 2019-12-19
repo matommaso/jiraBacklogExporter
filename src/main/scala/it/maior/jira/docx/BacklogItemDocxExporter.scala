@@ -3,7 +3,6 @@ package it.maior.jira.docx
 import java.util
 
 import it.maior.docx.{DocxFileCreator, ParagraphStyle}
-import it.maior.jira.JiraIssue
 import org.docx4j.wml.P
 
 import scala.collection.GenTraversableOnce

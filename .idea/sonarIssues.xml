@@ -3,6 +3,26 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="$PROJECT_DIR$/../examplArtifactId/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../examplArtifactId/src/it/maior/acs/alg/output/parser/ParseAndFormatApplication.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../examplArtifactId/src/it/maior/acs/alg/output/parser/ParseAndFormatterManager.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../examplArtifactId/src/it/maior/acs/alg/output/parser/SolutionDetails.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/pom.xml">
           <value>
             <set />
