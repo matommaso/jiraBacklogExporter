@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77f4e8e1-74de-4dad-ba5e-83fa846dd8ef" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jira-backlog-exporter.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/it/maior/jira/docx/BacklogItemDocxExporter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/it/maior/jira/docx/BacklogItemDocxExporter.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,12 +66,6 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
-  </component>
   <component name="ProjectId" id="1VCh6IRV9JbdaoeKnS19fFE7MuA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -92,7 +85,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Scala" />
+    <property name="settings.editor.selected.configurable" value="vcs.Mercurial" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -114,7 +107,7 @@
   <component name="RunManager" selected="Application.SystemDesignExporter">
     <configuration name="SystemDesignExporter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="it.maior.jira.application.SystemDesignExporter" />
-      <module name="jira-backlog-exporter" />
+      <module name="jiraBacklogExporter" />
       <option name="VM_PARAMETERS" value="-DjiraApiToker=VeUgni48lXfAbAjKwClg9E35 -DjiraUsername=tommaso.magherini@maior.it" />
       <extension name="coverage">
         <pattern>
@@ -299,6 +292,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Project_Structure/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1576762862840" />
+    <state x="677" y="178" key="#SystemDesignExporter" timestamp="1576773127810">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="677" y="178" key="#SystemDesignExporter/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1576773127810" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577090107477">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577090107477" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1576773035182">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1576773035182" />
+    <state width="1877" height="71" key="GridCell.Tab.0.bottom" timestamp="1576835291000">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="71" key="GridCell.Tab.0.bottom/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1576835291000" />
+    <state width="1877" height="71" key="GridCell.Tab.0.center" timestamp="1576835291000">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="71" key="GridCell.Tab.0.center/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1576835291000" />
+    <state width="1877" height="71" key="GridCell.Tab.0.left" timestamp="1576835291000">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="71" key="GridCell.Tab.0.left/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1576835291000" />
+    <state width="1877" height="71" key="GridCell.Tab.0.right" timestamp="1576835291000">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="71" key="GridCell.Tab.0.right/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1576835291000" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1577090302362">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577090302362" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -145,8 +145,7 @@ class BacklogItemDocxExporter(val issue: BacklogItem,
     def removeMetadataPrefixToDescribeBulletList(text: String, level: Int) =
       text.substring(level).trim
 
-    val level =
-      text.chars.takeWhile((c: Int) => c == '*' || c == '#').count.toInt
+    val level = text.chars.takeWhile((c: Int) => c == '*' || c == '#').count.toInt
 
     val actualTextOfBulletListItem =
       removeMetadataPrefixToDescribeBulletList(text, level)
