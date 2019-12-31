@@ -130,11 +130,13 @@ public class JiraClient {
         final String title = issue.getSummary();
         final String description = issue.getDescription();
         final String acceptanceCriteria = getCustomFieldValue(issue, "Acceptance Criteria", f -> extractString(f.getValue()));
+        final Set<String> labels = issue.getLabels();
+        final Status status = issue.getStatus();
 
         final Map<String, byte[]> attachments = extractAttachments(issue);
 
         final boolean partOfSystemDesign = getCustomFieldValue(issue, "Is part of the following official documents", f -> getValueFromJson(f.getValue())).equals(SYSTEM_DESIGN);
-        return new JiraIssue(phase, epicTitle, key, title, description, attachments, acceptanceCriteria, partOfSystemDesign);
+        return new JiraIssue(phase, epicTitle, key, title, description, attachments, acceptanceCriteria, partOfSystemDesign,labels,status);
     }
 
     private Map<String, byte[]> extractAttachments(Issue issue) {

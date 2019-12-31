@@ -1,8 +1,10 @@
 package it.maior.jira;
 
+import com.atlassian.jira.rest.client.api.domain.Status;
 import it.maior.jira.docx.BacklogItem;
 
 import java.util.Map;
+import java.util.Set;
 
 public class JiraIssue implements BacklogItem {
     final private String phase;
@@ -10,13 +12,15 @@ public class JiraIssue implements BacklogItem {
     final private String title;
     final private String id;
     final private String description;
+    final private Set<String> labels;
+    final private Status status;
 
     final private Map<String, byte[]> attachments;
 
     final private boolean partOfSystemDesign;
     private final String acceptanceCriteria;
 
-    public JiraIssue(String phase, String epic, String id, String title, String description, Map<String, byte[]> attachments, String acceptanceCriteria, boolean partOfSystemDesign) {
+    public JiraIssue(String phase, String epic, String id, String title, String description, Map<String, byte[]> attachments, String acceptanceCriteria, boolean partOfSystemDesign, Set<String> labels, Status status) {
         this.phase = phase;
         this.epic = epic;
         this.title = title;
@@ -25,6 +29,8 @@ public class JiraIssue implements BacklogItem {
         this.attachments = attachments;
         this.partOfSystemDesign = partOfSystemDesign;
         this.acceptanceCriteria = acceptanceCriteria;
+        this.labels = labels;
+        this.status = status;
     }
 
     public String getPhase() {
@@ -43,13 +49,20 @@ public class JiraIssue implements BacklogItem {
         return id;
     }
 
-
     public String getDescription() {
         return description;
     }
 
     public Map<String, byte[]> getAttachments() {
         return attachments;
+    }
+
+    public Set<String> getLabels() {
+        return labels;
+    }
+
+    public String getStatus() {
+        return status.getName();
     }
 
     @Override

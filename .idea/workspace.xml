@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77f4e8e1-74de-4dad-ba5e-83fa846dd8ef" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/maior/jira/Epic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/maior/jira/Epic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/maior/jira/JiraIssue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/maior/jira/JiraIssue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/maior/jira/extractor/JiraClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/maior/jira/extractor/JiraClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/it/maior/jira/docx/BacklogItem.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/it/maior/jira/docx/BacklogItem.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/it/maior/jira/docx/BacklogItemDocxExporter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/it/maior/jira/docx/BacklogItemDocxExporter.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,29 +32,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>flatmap</find>
-      <find>mainDocumentPart.getContent().add(</find>
-      <find>styled</find>
-      <find>addE,m</find>
-      <find>head</find>
-      <find>Optional</find>
-      <find>List</find>
-      <find>2.12</find>
-      <find>version</find>
-      <find>DocxFileCreator</find>
-      <find>HE</find>
-      <find>mocki</find>
-      <find>java</find>
-      <find>10</find>
-      <find>jira</find>
-      <find>defineClass</find>
-    </findStrings>
-    <dirStrings>
-      <dir>C:\Users\GIGI\git\icaroXt\jiraBacklogExporter\src</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -82,7 +62,7 @@
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/scala" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Mercurial" />
@@ -288,38 +268,66 @@
     </todo-panel>
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="178" key="#Project_Structure" timestamp="1576762862840">
+    <state x="552" y="178" key="#Project_Structure" timestamp="1577090663123">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="178" key="#Project_Structure/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1576762862840" />
+    <state x="552" y="178" key="#Project_Structure/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577090663123" />
     <state x="677" y="178" key="#SystemDesignExporter" timestamp="1576773127810">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="677" y="178" key="#SystemDesignExporter/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1576773127810" />
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577090107477">
+    <state x="690" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1577717120355">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577090107477" />
+    <state x="690" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577717120355" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577090670507">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577090670507" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1577782203715">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577782203715" />
+    <state x="-1457" y="69" width="511" height="595" key="#xdebugger.evaluate" timestamp="1577783020232">
+      <screen x="-1920" y="0" width="1280" height="693" />
+    </state>
+    <state x="-1457" y="69" width="511" height="595" key="#xdebugger.evaluate/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577783020232" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1576773035182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1576773035182" />
-    <state width="1877" height="71" key="GridCell.Tab.0.bottom" timestamp="1576835291000">
+    <state width="1877" height="344" key="GridCell.Tab.0.bottom" timestamp="1577783028723">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="71" key="GridCell.Tab.0.bottom/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1576835291000" />
-    <state width="1877" height="71" key="GridCell.Tab.0.center" timestamp="1576835291000">
+    <state width="1877" height="344" key="GridCell.Tab.0.bottom/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577783028723" />
+    <state width="1877" height="344" key="GridCell.Tab.0.center" timestamp="1577783028723">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="71" key="GridCell.Tab.0.center/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1576835291000" />
-    <state width="1877" height="71" key="GridCell.Tab.0.left" timestamp="1576835291000">
+    <state width="1877" height="344" key="GridCell.Tab.0.center/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577783028723" />
+    <state width="1877" height="344" key="GridCell.Tab.0.left" timestamp="1577783028722">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="71" key="GridCell.Tab.0.left/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1576835291000" />
-    <state width="1877" height="71" key="GridCell.Tab.0.right" timestamp="1576835291000">
+    <state width="1877" height="344" key="GridCell.Tab.0.left/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577783028722" />
+    <state width="1877" height="344" key="GridCell.Tab.0.right" timestamp="1577783028723">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="71" key="GridCell.Tab.0.right/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1576835291000" />
+    <state width="1877" height="344" key="GridCell.Tab.0.right/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577783028723" />
+    <state width="1877" height="344" key="GridCell.Tab.1.bottom" timestamp="1577783028723">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="344" key="GridCell.Tab.1.bottom/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577783028723" />
+    <state width="1877" height="344" key="GridCell.Tab.1.center" timestamp="1577783028723">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="344" key="GridCell.Tab.1.center/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577783028723" />
+    <state width="1877" height="344" key="GridCell.Tab.1.left" timestamp="1577783028723">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="344" key="GridCell.Tab.1.left/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577783028723" />
+    <state width="1877" height="344" key="GridCell.Tab.1.right" timestamp="1577783028723">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="344" key="GridCell.Tab.1.right/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577783028723" />
     <state x="440" y="94" key="SettingsEditor" timestamp="1577090302362">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -330,7 +338,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/it/maior/jira/extractor/JiraClient.java</url>
-          <line>192</line>
+          <line>193</line>
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -339,9 +347,14 @@
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/it/maior/jira/extractor/JiraClient.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="87" />
+          <url>file://$PROJECT_DIR$/src/main/java/it/maior/jira/JiraIssue.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/main/scala/it/maior/jira/docx/BacklogItemDocxExporter.scala</url>
+          <line>40</line>
+          <option name="timeStamp" value="88" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -350,68 +363,5 @@
         <watch expression="epic.getTitle()" language="JAVA" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="breakpointCondition">
-      <expression>
-        <expression-string>p.startsWith(&quot;h3&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-    <expressions id="watch">
-      <expression>
-        <expression-string>epic.getTitle()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-    <expressions id="evaluateExpression">
-      <expression>
-        <expression-string>issue.getId + &quot; - &quot; + issue.getTitle</expression-string>
-        <language-id>Scala</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>issue</expression-string>
-        <language-id>Scala</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>issue.getAttachments</expression-string>
-        <language-id>Scala</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>issueClient</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>issueClient.getIssue(issue.getKey()).claim()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>issueClient.getIssue(issue.getKey()).claim().getAttachments()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>issue</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>issueClient.getIssue(issue.getKey())</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>description</expression-string>
-        <language-id>Scala</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
   </component>
 </project>

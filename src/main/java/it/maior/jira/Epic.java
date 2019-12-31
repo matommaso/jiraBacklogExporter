@@ -1,10 +1,8 @@
 package it.maior.jira;
 
 import it.maior.jira.docx.BacklogItem;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import com.atlassian.jira.rest.client.api.domain.Status;
+import java.util.*;
 
 public class Epic implements BacklogItem {
 
@@ -66,7 +64,16 @@ public class Epic implements BacklogItem {
     }
 
     @Override
+    public Set<String> getLabels() {
+        return new HashSet<String>();
+    }
+
+    @Override
     public String getId() {
         return id;
+    }
+
+    public String getStatus() {
+        return ""; //FiXME
     }
 }

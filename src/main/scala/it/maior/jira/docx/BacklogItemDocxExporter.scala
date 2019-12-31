@@ -27,28 +27,52 @@ class BacklogItemDocxExporter(val issue: BacklogItem,
   }
 
   private def writeIssueInATable() = {
-    def createHeader: String = {
-      issue.getId + " - " + issue.getTitle
-    }
+
+    val header = issue.getId + " - " + issue.getTitle
 
     val titleRow: List[util.List[P]] = createTitleParagraphs(
       docxFileCreator.createStyledParagraphOfText(
         ParagraphStyle.HEADING3.getStyle,
-        createHeader
+        header
       )
     ).map(createCell).getOrElse(List.empty)
+
+
+    val status: List[util.List[P]] = createParagraphs(
+      docxFileCreator.createStyledParagraphOfText(
+        ParagraphStyle.NORMAL.getStyle,
+        issue.getStatus
+      )
+    ).map(createCell).getOrElse(List.empty)
+
+
+
+
+    val labelString = issue.getLabels.toArray().mkString(" , ")
+    val labels: List[util.List[P]] = createParagraphs(
+      docxFileCreator.createStyledParagraphOfText(
+        ParagraphStyle.NORMAL.getStyle,
+        labelString
+      )
+    ).map(createCell).getOrElse(List.empty)
+
+
+
+
     val descriptionRows: List[util.List[P]] = createDescriptionParagraphs(
       issue.getDescription
     ).map(createCell).getOrElse(List.empty)
 
     docxFileCreator.addTableWith(
-      List(titleRow.asJava, descriptionRows.asJava).asJava
+      List(titleRow.asJava, status.asJava, labels.asJava, descriptionRows.asJava).asJava
     )
   }
 
+  private def createParagraphs(paragraph: P) = Option(List(paragraph))
+
   private def createDescriptionParagraphs(
-    description: Description
-  ): Option[List[P]] = {
+                                           description: Description
+                                         ): Option[List[P]] = {
     def extractListOfParagraphs(descriptionLines: Array[String]): List[P] = {
       descriptionLines.flatMap(this.createParagraphsFromUnformattedText).toList
     }
