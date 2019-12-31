@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="77f4e8e1-74de-4dad-ba5e-83fa846dd8ef" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/maior/jira/Epic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/maior/jira/Epic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/maior/jira/JiraIssue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/maior/jira/JiraIssue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/maior/jira/application/SystemDesignExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/maior/jira/application/SystemDesignExporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/maior/jira/docx/EpicTestPlanExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/maior/jira/docx/EpicTestPlanExporter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/maior/jira/extractor/JiraClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/maior/jira/extractor/JiraClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/it/maior/jira/docx/BacklogItem.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/it/maior/jira/docx/BacklogItem.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/it/maior/jira/docx/BacklogItemDocxExporter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/it/maior/jira/docx/BacklogItemDocxExporter.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +83,7 @@
       <recent name="it.maior.jira.exporter" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SystemDesignExporter">
+  <component name="RunManager" selected="Application.TestPlanExporter">
     <configuration name="SystemDesignExporter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="it.maior.jira.application.SystemDesignExporter" />
       <module name="jiraBacklogExporter" />
@@ -102,7 +100,7 @@
     </configuration>
     <configuration name="TestPlanExporter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="it.maior.jira.application.TestPlanExporter" />
-      <module name="jira-backlog-exporter" />
+      <module name="jiraBacklogExporter" />
       <option name="VM_PARAMETERS" value="-DjiraApiToker=VeUgni48lXfAbAjKwClg9E35 -DjiraUsername=tommaso.magherini@maior.it" />
       <extension name="coverage">
         <pattern>
@@ -194,10 +192,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestPlanExporter" />
         <item itemvalue="Application.SystemDesignExporter" />
         <item itemvalue="ScalaTest.BacklogItemDocxExporterTest (1)" />
         <item itemvalue="JUnit.scala in jira-backlog-exporter" />
-        <item itemvalue="Application.TestPlanExporter" />
         <item itemvalue="ScalaTest.BacklogItemDocxExporterTest" />
       </list>
     </recent_temporary>
@@ -281,65 +279,69 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577717120355" />
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577090670507">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577805421160">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577090670507" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577805421160" />
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1577799823827">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577799823827" />
-    <state x="-1723" y="77" width="942" height="595" key="#xdebugger.evaluate" timestamp="1577805027084">
+    <state x="-1723" y="77" width="942" height="595" key="#xdebugger.evaluate" timestamp="1577807619130">
       <screen x="-1920" y="0" width="1280" height="693" />
     </state>
-    <state x="-1723" y="77" width="942" height="595" key="#xdebugger.evaluate/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577805027084" />
+    <state x="-1723" y="77" width="942" height="595" key="#xdebugger.evaluate/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577807619130" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1576773035182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1576773035182" />
-    <state width="1877" height="84" key="GridCell.Tab.0.bottom" timestamp="1577805114243">
+    <state width="1877" height="316" key="GridCell.Tab.0.bottom" timestamp="1577808484442">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="84" key="GridCell.Tab.0.bottom/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577805114243" />
-    <state width="1877" height="84" key="GridCell.Tab.0.center" timestamp="1577805114242">
+    <state width="1877" height="316" key="GridCell.Tab.0.bottom/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577808484442" />
+    <state width="1877" height="316" key="GridCell.Tab.0.center" timestamp="1577808484442">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="84" key="GridCell.Tab.0.center/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577805114242" />
-    <state width="1877" height="84" key="GridCell.Tab.0.left" timestamp="1577805114242">
+    <state width="1877" height="316" key="GridCell.Tab.0.center/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577808484442" />
+    <state width="1877" height="316" key="GridCell.Tab.0.left" timestamp="1577808484442">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="84" key="GridCell.Tab.0.left/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577805114242" />
-    <state width="1877" height="84" key="GridCell.Tab.0.right" timestamp="1577805114243">
+    <state width="1877" height="316" key="GridCell.Tab.0.left/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577808484442" />
+    <state width="1877" height="316" key="GridCell.Tab.0.right" timestamp="1577808484442">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="84" key="GridCell.Tab.0.right/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577805114243" />
-    <state width="1877" height="84" key="GridCell.Tab.1.bottom" timestamp="1577805114244">
+    <state width="1877" height="316" key="GridCell.Tab.0.right/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577808484442" />
+    <state width="1877" height="415" key="GridCell.Tab.1.bottom" timestamp="1577807635527">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="84" key="GridCell.Tab.1.bottom/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577805114244" />
-    <state width="1877" height="84" key="GridCell.Tab.1.center" timestamp="1577805114243">
+    <state width="1877" height="415" key="GridCell.Tab.1.bottom/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577807635527" />
+    <state width="1877" height="415" key="GridCell.Tab.1.center" timestamp="1577807635526">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="84" key="GridCell.Tab.1.center/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577805114243" />
-    <state width="1877" height="84" key="GridCell.Tab.1.left" timestamp="1577805114243">
+    <state width="1877" height="415" key="GridCell.Tab.1.center/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577807635526" />
+    <state width="1877" height="415" key="GridCell.Tab.1.left" timestamp="1577807635526">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="84" key="GridCell.Tab.1.left/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577805114243" />
-    <state width="1877" height="84" key="GridCell.Tab.1.right" timestamp="1577805114243">
+    <state width="1877" height="415" key="GridCell.Tab.1.left/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577807635526" />
+    <state width="1877" height="415" key="GridCell.Tab.1.right" timestamp="1577807635527">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="84" key="GridCell.Tab.1.right/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577805114243" />
+    <state width="1877" height="415" key="GridCell.Tab.1.right/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577807635527" />
     <state x="440" y="94" key="SettingsEditor" timestamp="1577090302362">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577090302362" />
+    <state x="656" y="257" width="607" height="526" key="find.popup" timestamp="1577807448951">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="257" width="607" height="526" key="find.popup/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577807448951" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/it/maior/jira/extractor/JiraClient.java</url>
-          <line>232</line>
+          <line>233</line>
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -351,6 +353,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/it/maior/jira/extractor/JiraClient.java</url>
           <line>153</line>
           <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/it/maior/jira/extractor/JiraClient.java</url>
+          <line>172</line>
+          <option name="timeStamp" value="115" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="scala-line">
           <url>file://$PROJECT_DIR$/src/main/scala/it/maior/jira/docx/BacklogItemDocxExporter.scala</url>

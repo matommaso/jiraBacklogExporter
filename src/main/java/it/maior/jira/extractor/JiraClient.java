@@ -137,7 +137,7 @@ public class JiraClient {
 
         final Map<String, byte[]> attachments = extractAttachments(issue);
 
-        final String sprintName = getSprintName(issue);
+        final String sprintName = extractSprintName(issue);
 
 
         final boolean partOfSystemDesign = getCustomFieldValue(issue, "Is part of the following official documents", f -> getValueFromJson(f.getValue())).equals(SYSTEM_DESIGN);
@@ -145,7 +145,7 @@ public class JiraClient {
     }
 
     //TODO: update this horrible method
-    private String getSprintName(Issue issue) {
+    private String extractSprintName(Issue issue) {
 
 
         String sprintName = "";
@@ -169,7 +169,8 @@ public class JiraClient {
                 String[] subStrings = data.split(",");
                 for (String substring : subStrings) {
                     if (substring.startsWith("name=")) {
-                        sprintName = sprintName + " , " + substring.split("=")[1];
+                        if (substring.split("=")[1].compareTo(sprintName) >= 0)
+                            sprintName = substring.split("=")[1];
                     }
 
                 }

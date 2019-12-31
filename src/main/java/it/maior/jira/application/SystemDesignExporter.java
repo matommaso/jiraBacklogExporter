@@ -5,7 +5,6 @@ import it.maior.docx.ParagraphStyle;
 import it.maior.jira.Backlog;
 import it.maior.jira.JiraIssue;
 import it.maior.jira.docx.EpicDocxExporter;
-
 import it.maior.jira.extractor.JiraClientFactory;
 
 import java.util.Arrays;
