@@ -71,17 +71,18 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="it.maior.jira.docx" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="it.maior.jira.exporter" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="it.maior.jira.docx" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="org.scalatest.FlatSpec" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="it.maior.jira.exporter" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="org.scalatest.FlatSpec" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="it.maior.jira" />
+      <recent name="it.maior.jira.exporter" />
     </key>
   </component>
   <component name="RunManager" selected="Application.SystemDesignExporter">
@@ -284,50 +285,50 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577090670507" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1577782203715">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1577799823827">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577782203715" />
-    <state x="-1457" y="69" width="511" height="595" key="#xdebugger.evaluate" timestamp="1577783020232">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577799823827" />
+    <state x="-1723" y="77" width="942" height="595" key="#xdebugger.evaluate" timestamp="1577805027084">
       <screen x="-1920" y="0" width="1280" height="693" />
     </state>
-    <state x="-1457" y="69" width="511" height="595" key="#xdebugger.evaluate/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577783020232" />
+    <state x="-1723" y="77" width="942" height="595" key="#xdebugger.evaluate/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577805027084" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1576773035182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1576773035182" />
-    <state width="1877" height="344" key="GridCell.Tab.0.bottom" timestamp="1577783028723">
+    <state width="1877" height="84" key="GridCell.Tab.0.bottom" timestamp="1577805114243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.0.bottom/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577783028723" />
-    <state width="1877" height="344" key="GridCell.Tab.0.center" timestamp="1577783028723">
+    <state width="1877" height="84" key="GridCell.Tab.0.bottom/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577805114243" />
+    <state width="1877" height="84" key="GridCell.Tab.0.center" timestamp="1577805114242">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.0.center/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577783028723" />
-    <state width="1877" height="344" key="GridCell.Tab.0.left" timestamp="1577783028722">
+    <state width="1877" height="84" key="GridCell.Tab.0.center/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577805114242" />
+    <state width="1877" height="84" key="GridCell.Tab.0.left" timestamp="1577805114242">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.0.left/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577783028722" />
-    <state width="1877" height="344" key="GridCell.Tab.0.right" timestamp="1577783028723">
+    <state width="1877" height="84" key="GridCell.Tab.0.left/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577805114242" />
+    <state width="1877" height="84" key="GridCell.Tab.0.right" timestamp="1577805114243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.0.right/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577783028723" />
-    <state width="1877" height="344" key="GridCell.Tab.1.bottom" timestamp="1577783028723">
+    <state width="1877" height="84" key="GridCell.Tab.0.right/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577805114243" />
+    <state width="1877" height="84" key="GridCell.Tab.1.bottom" timestamp="1577805114244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.1.bottom/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577783028723" />
-    <state width="1877" height="344" key="GridCell.Tab.1.center" timestamp="1577783028723">
+    <state width="1877" height="84" key="GridCell.Tab.1.bottom/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577805114244" />
+    <state width="1877" height="84" key="GridCell.Tab.1.center" timestamp="1577805114243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.1.center/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577783028723" />
-    <state width="1877" height="344" key="GridCell.Tab.1.left" timestamp="1577783028723">
+    <state width="1877" height="84" key="GridCell.Tab.1.center/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577805114243" />
+    <state width="1877" height="84" key="GridCell.Tab.1.left" timestamp="1577805114243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.1.left/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577783028723" />
-    <state width="1877" height="344" key="GridCell.Tab.1.right" timestamp="1577783028723">
+    <state width="1877" height="84" key="GridCell.Tab.1.left/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577805114243" />
+    <state width="1877" height="84" key="GridCell.Tab.1.right" timestamp="1577805114243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="344" key="GridCell.Tab.1.right/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577783028723" />
+    <state width="1877" height="84" key="GridCell.Tab.1.right/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1577805114243" />
     <state x="440" y="94" key="SettingsEditor" timestamp="1577090302362">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -338,7 +339,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/it/maior/jira/extractor/JiraClient.java</url>
-          <line>193</line>
+          <line>232</line>
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -347,14 +348,14 @@
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/it/maior/jira/JiraIssue.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="89" />
+          <url>file://$PROJECT_DIR$/src/main/java/it/maior/jira/extractor/JiraClient.java</url>
+          <line>153</line>
+          <option name="timeStamp" value="111" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="scala-line">
           <url>file://$PROJECT_DIR$/src/main/scala/it/maior/jira/docx/BacklogItemDocxExporter.scala</url>
-          <line>40</line>
-          <option name="timeStamp" value="88" />
+          <line>48</line>
+          <option name="timeStamp" value="109" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

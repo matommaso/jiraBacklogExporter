@@ -76,4 +76,9 @@ public class Epic implements BacklogItem {
     public String getStatus() {
         return ""; //FiXME
     }
+
+
+    public String getSprintName() {
+        return ""; //FIXME
+    }
 }

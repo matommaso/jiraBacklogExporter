@@ -14,13 +14,14 @@ public class JiraIssue implements BacklogItem {
     final private String description;
     final private Set<String> labels;
     final private Status status;
+    final private String sprintName;
 
     final private Map<String, byte[]> attachments;
 
     final private boolean partOfSystemDesign;
     private final String acceptanceCriteria;
 
-    public JiraIssue(String phase, String epic, String id, String title, String description, Map<String, byte[]> attachments, String acceptanceCriteria, boolean partOfSystemDesign, Set<String> labels, Status status) {
+    public JiraIssue(String phase, String epic, String id, String title, String description, Map<String, byte[]> attachments, String acceptanceCriteria, boolean partOfSystemDesign, Set<String> labels, Status status, String sprintName) {
         this.phase = phase;
         this.epic = epic;
         this.title = title;
@@ -31,6 +32,7 @@ public class JiraIssue implements BacklogItem {
         this.acceptanceCriteria = acceptanceCriteria;
         this.labels = labels;
         this.status = status;
+        this.sprintName = sprintName;
     }
 
     public String getPhase() {
@@ -64,6 +66,11 @@ public class JiraIssue implements BacklogItem {
     public String getStatus() {
         return status.getName();
     }
+
+    public String getSprintName() {
+        return sprintName;
+    }
+
 
     @Override
     public String getAcceptanceCriteria() {

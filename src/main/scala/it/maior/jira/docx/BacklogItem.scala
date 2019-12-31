@@ -11,4 +11,5 @@ trait BacklogItem {
   def getAcceptanceCriteria: String
   def getLabels: Set[String]
   def getStatus: String
+  def getSprintName: String
 }

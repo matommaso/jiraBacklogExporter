@@ -46,6 +46,12 @@ class BacklogItemDocxExporter(val issue: BacklogItem,
     ).map(createCell).getOrElse(List.empty)
 
 
+    val sprintName: List[util.List[P]] = createParagraphs(
+      docxFileCreator.createStyledParagraphOfText(
+        ParagraphStyle.NORMAL.getStyle,
+        issue.getSprintName
+      )
+    ).map(createCell).getOrElse(List.empty)
 
 
     val labelString = issue.getLabels.toArray().mkString(" , ")
@@ -57,14 +63,12 @@ class BacklogItemDocxExporter(val issue: BacklogItem,
     ).map(createCell).getOrElse(List.empty)
 
 
-
-
     val descriptionRows: List[util.List[P]] = createDescriptionParagraphs(
       issue.getDescription
     ).map(createCell).getOrElse(List.empty)
 
     docxFileCreator.addTableWith(
-      List(titleRow.asJava, status.asJava, labels.asJava, descriptionRows.asJava).asJava
+      List(titleRow.asJava, status.asJava, sprintName.asJava, labels.asJava, descriptionRows.asJava).asJava
     )
   }
 

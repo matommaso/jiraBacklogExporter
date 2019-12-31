@@ -12,6 +12,8 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.node.ArrayNode;
+import org.codehaus.jettison.json.JSONArray;
+import org.codehaus.jettison.json.JSONException;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -135,8 +137,45 @@ public class JiraClient {
 
         final Map<String, byte[]> attachments = extractAttachments(issue);
 
+        final String sprintName = getSprintName(issue);
+
+
         final boolean partOfSystemDesign = getCustomFieldValue(issue, "Is part of the following official documents", f -> getValueFromJson(f.getValue())).equals(SYSTEM_DESIGN);
-        return new JiraIssue(phase, epicTitle, key, title, description, attachments, acceptanceCriteria, partOfSystemDesign,labels,status);
+        return new JiraIssue(phase, epicTitle, key, title, description, attachments, acceptanceCriteria, partOfSystemDesign, labels, status, sprintName);
+    }
+
+    //TODO: update this horrible method
+    private String getSprintName(Issue issue) {
+
+
+        String sprintName = "";
+        if (issue.getFieldByName("Sprint").getValue() != null) {
+
+            JSONArray tmp = (JSONArray) issue.getFieldByName("Sprint").getValue();
+
+            ArrayList<String> listdata = new ArrayList<String>();
+
+            if (tmp != null) {
+                for (int i = 0; i < tmp.length(); i++) {
+                    try {
+                        listdata.add(tmp.getString(i));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            for (String data : listdata) {
+                String[] subStrings = data.split(",");
+                for (String substring : subStrings) {
+                    if (substring.startsWith("name=")) {
+                        sprintName = sprintName + " , " + substring.split("=")[1];
+                    }
+
+                }
+            }
+        }
+        return sprintName;
     }
 
     private Map<String, byte[]> extractAttachments(Issue issue) {
@@ -151,7 +190,7 @@ public class JiraClient {
                 System.out.println("Retrying claiming " + issue.getKey());
                 sleep(300);
             }
-        } while(claim == null);
+        } while (claim == null);
 
         do {
             try {
@@ -162,11 +201,11 @@ public class JiraClient {
                 System.out.println("Retrying attachments " + issue.getKey());
                 sleep(300);
             }
-        } while(collect == null);
+        } while (collect == null);
         return collect;
     }
 
-    private void sleep(int i)  {
+    private void sleep(int i) {
         try {
             Thread.sleep(i);
         } catch (InterruptedException e) {
@@ -179,7 +218,7 @@ public class JiraClient {
     }
 
     private Optional<String> extractString(Object value) {
-        if(value == null) {
+        if (value == null) {
             return Optional.empty();
         }
 
@@ -200,7 +239,7 @@ public class JiraClient {
 
     private JsonNode getJsonNode(Object o) throws IOException {
         final JsonNode jsonNode = mapper.readTree(o.toString());
-        if(jsonNode instanceof ArrayNode) {
+        if (jsonNode instanceof ArrayNode) {
             return jsonNode.get(0);
         }
         return jsonNode;
