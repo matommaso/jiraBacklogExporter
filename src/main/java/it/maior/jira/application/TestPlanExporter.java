@@ -14,6 +14,9 @@ import static it.maior.jira.exporter.Phase.*;
 public class TestPlanExporter {
 
     public static void main(String[] args) {
+
+        final TestPlanConditions testPlanConditions = new TestPlanConditions();
+
         final Backlog backlog = JiraClientFactory.createMyJiraClient().retrieveBacklog();
 
         final DocxFileCreator docxFileCreator = new DocxFileCreator();
@@ -22,10 +25,9 @@ public class TestPlanExporter {
                 phase -> {
                     writePhase(docxFileCreator, phase.getDescription());
                     backlog.getEpics().stream()
-                            .forEach(epic -> new EpicTestPlanExporter(epic, docxFileCreator, (JiraIssue i) -> i.getPhase().equals(phase.getValue())).export());
+                            .forEach(epic -> new EpicTestPlanExporter(epic, docxFileCreator,testPlanConditions, (JiraIssue i) -> i.getPhase().equals(phase.getValue())).export());
                 }
         );
-
 
         docxFileCreator.saveFileDocx("./output/testPlan.docx");
     }

@@ -26,11 +26,11 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
+
 public class JiraClient {
     public static final String QUERY_TO_FIND_ALL_ISSUES_IN_ICAROXT_PROJECT = "project = IC and issuetype in (Story, Bug) ";
     public static final String QUERY_TO_FIND_ALL_ISSUES_IN_ICAROXT_EPIC = "project = IC and issuetype in (Story, Bug) and \"Epic Link\" = {0} Order By RANK";
     public static final String QUERY_TO_FIND_ALL_EPICS_IN_ICAROXT_PROJECT = "project = IC and issuetype = Epic Order By RANK"; // and "Epic Status" = Done
-    public static final String SYSTEM_DESIGN = "System Design";
 
     private final String username;
     private final String password;
@@ -49,17 +49,6 @@ public class JiraClient {
 
         issueClient = restClient.getIssueClient();
     }
-
-//    public Backlog _retrieveBacklog() {
-//        final List<Issue> issues = retrieveIssues();
-//
-//        return issues.stream()
-//                .parallel()
-//                .map(issue -> toJiraIssue(issue, ""))
-//                .sorted(Comparator.comparing(JiraIssue::getEpic))
-//                .collect(() -> new Backlog(), (backlog, epic) -> backlog.addIssue(epic), (backlog1, backlog2) -> backlog1.mergeWith(backlog2));
-//
-//    }
 
     public Backlog retrieveBacklog() {
         final List<Issue> epics = retrieveEpics();
@@ -139,40 +128,34 @@ public class JiraClient {
 
         final String sprintName = extractSprintName(issue);
 
-
-        final boolean partOfSystemDesign = getCustomFieldValue(issue, "Is part of the following official documents", f -> getValueFromJson(f.getValue())).equals(SYSTEM_DESIGN);
-        return new JiraIssue(phase, epicTitle, key, title, description, attachments, acceptanceCriteria, partOfSystemDesign, labels, status, sprintName);
+        final String icaroXtDocument = getCustomFieldValue(issue, "Is part of the following official documents", f -> getValueFromJson(f.getValue()));
+        return new JiraIssue(phase, epicTitle, key, title, description, attachments, acceptanceCriteria, icaroXtDocument, labels, status, sprintName);
     }
 
     //TODO: update this horrible method
     private String extractSprintName(Issue issue) {
 
-
         String sprintName = "";
         if (issue.getFieldByName("Sprint").getValue() != null) {
 
-            JSONArray tmp = (JSONArray) issue.getFieldByName("Sprint").getValue();
+            JSONArray sprintsData = (JSONArray) issue.getFieldByName("Sprint").getValue();
+            ArrayList<String> sprints = new ArrayList<String>();
 
-            ArrayList<String> listdata = new ArrayList<String>();
-
-            if (tmp != null) {
-                for (int i = 0; i < tmp.length(); i++) {
+            if (sprintsData != null) {
+                for (int i = 0; i < sprintsData.length(); i++) {
                     try {
-                        listdata.add(tmp.getString(i));
+                        sprints.add(sprintsData.getString(i));
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
                 }
             }
 
-            for (String data : listdata) {
+            for (String data : sprints) {
                 String[] subStrings = data.split(",");
                 for (String substring : subStrings) {
-                    if (substring.startsWith("name=")) {
-                        if (substring.split("=")[1].compareTo(sprintName) >= 0)
+                    if (substring.startsWith("name=") && substring.split("=")[1].compareTo(sprintName) >= 0)
                             sprintName = substring.split("=")[1];
-                    }
-
                 }
             }
         }

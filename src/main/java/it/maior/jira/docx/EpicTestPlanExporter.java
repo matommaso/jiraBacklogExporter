@@ -3,20 +3,22 @@ package it.maior.jira.docx;
 import it.maior.docx.DocxFileCreator;
 import it.maior.jira.Epic;
 import it.maior.jira.JiraIssue;
+import it.maior.jira.application.TestPlanConditions;
 
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class EpicTestPlanExporter {
-    private final String done = "Done";
     private final Epic epic;
     private final DocxFileCreator docxFileCreator;
     private final Predicate<JiraIssue> jiraIssuePredicate;
+    private final TestPlanConditions testPlanConditions;
 
-    public EpicTestPlanExporter(Epic epic, DocxFileCreator docxFileCreator, Predicate<JiraIssue> jiraIssuePredicate) {
+    public EpicTestPlanExporter(Epic epic, DocxFileCreator docxFileCreator, TestPlanConditions testPlanConditions, Predicate<JiraIssue> jiraIssuePredicate) {
         this.epic = epic;
         this.docxFileCreator = docxFileCreator;
+        this.testPlanConditions = testPlanConditions;
         this.jiraIssuePredicate = jiraIssuePredicate;
     }
 
@@ -26,7 +28,7 @@ public class EpicTestPlanExporter {
         if (filteredJiraIssues.size() > 0) {
             docxFileCreator.writeTitle(epic.getTitle());
 
-            filteredJiraIssues.stream().filter(issue -> issue.getStatus().equals(done) && "IC Sprint 20".compareTo(issue.getSprintName())<=0)
+            filteredJiraIssues.stream()
                     .forEach(issue -> {
                         final BacklogItemDocxExporter backlogItemDocxExporter = new BacklogItemDocxExporter(issue, docxFileCreator);
                         backlogItemDocxExporter.export();
@@ -37,9 +39,19 @@ public class EpicTestPlanExporter {
 
     }
 
+    private boolean getFilteredJiraIssues(JiraIssue issue) {
+        return
+                issue.getStatus().equals(testPlanConditions.getIssueStatus())
+                        && issue.getSprintNumber() >= testPlanConditions.getFirstSprintNumber()
+                        && issue.getSprintNumber() <= testPlanConditions.getLastSprintNumber()
+                      //  && issue.getIcaroXtDocument().equals(testPlanConditions.getIssueIcaroXtDocument())
+                ;
+    }
+
     private List<JiraIssue> getFilteredJiraIssues() {
         return epic.getIssues().stream()
-                .filter(issue -> issue.isPartOfSystemDesign())
-                .filter(jiraIssuePredicate).collect(Collectors.toList());
+                .filter(issue -> getFilteredJiraIssues(issue))
+                .filter(jiraIssuePredicate)
+                .collect(Collectors.toList());
     }
 }

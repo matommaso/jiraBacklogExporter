@@ -5,6 +5,8 @@ import it.maior.jira.docx.BacklogItem;
 
 import java.util.Map;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class JiraIssue implements BacklogItem {
     final private String phase;
@@ -18,17 +20,17 @@ public class JiraIssue implements BacklogItem {
 
     final private Map<String, byte[]> attachments;
 
-    final private boolean partOfSystemDesign;
+    final private String icaroxtDocument;
     private final String acceptanceCriteria;
 
-    public JiraIssue(String phase, String epic, String id, String title, String description, Map<String, byte[]> attachments, String acceptanceCriteria, boolean partOfSystemDesign, Set<String> labels, Status status, String sprintName) {
+    public JiraIssue(String phase, String epic, String id, String title, String description, Map<String, byte[]> attachments, String acceptanceCriteria, String icaroxtDocument, Set<String> labels, Status status, String sprintName) {
         this.phase = phase;
         this.epic = epic;
         this.title = title;
         this.id = id;
         this.description = description;
         this.attachments = attachments;
-        this.partOfSystemDesign = partOfSystemDesign;
+        this.icaroxtDocument = icaroxtDocument;
         this.acceptanceCriteria = acceptanceCriteria;
         this.labels = labels;
         this.status = status;
@@ -72,13 +74,24 @@ public class JiraIssue implements BacklogItem {
     }
 
 
+    public int getSprintNumber() {
+        Pattern pattern = Pattern.compile("\\d+");
+        Matcher matcher = pattern.matcher(this.sprintName);
+        int sprintNumber = 0;
+        while (matcher.find()) {
+            sprintNumber = Integer.parseInt(matcher.group(0));
+        }
+        return sprintNumber;
+    }
+
+
     @Override
     public String getAcceptanceCriteria() {
         return acceptanceCriteria;
     }
 
-    public boolean isPartOfSystemDesign() {
-        return partOfSystemDesign;
+    public String getIcaroXtDocument() {
+        return icaroxtDocument;
     }
 
     @Override
@@ -88,15 +101,4 @@ public class JiraIssue implements BacklogItem {
                 ", title='" + title + '\'' +
                 '}';
     }
-
-//    @Override
-//    public String toString() {
-//        return "JiraIssue{" +
-//                "phase='" + phase + '\'' +
-//                ", epic='" + epic + '\'' +
-//                ", title='" + title + '\'' +
-//                ", description='" + description + '\'' +
-//                ", attachments=" + attachments +
-//                '}';
-//    }
 }

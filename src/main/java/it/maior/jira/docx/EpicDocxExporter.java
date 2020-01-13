@@ -37,7 +37,7 @@ public class EpicDocxExporter {
 
     private List<JiraIssue> getFilteredJiraIssues() {
         return epic.getIssues().stream()
-                    .filter(issue -> issue.isPartOfSystemDesign())
+                .filter(issue -> issue.getIcaroXtDocument().equals("System Design"))
                     .filter(jiraIssuePredicate).collect(Collectors.toList());
     }
 }

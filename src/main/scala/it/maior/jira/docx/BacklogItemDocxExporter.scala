@@ -67,8 +67,13 @@ class BacklogItemDocxExporter(val issue: BacklogItem,
       issue.getDescription
     ).map(createCell).getOrElse(List.empty)
 
+
+
+//    docxFileCreator.addTableWith(
+//      List(titleRow.asJava, status.asJava, sprintName.asJava, labels.asJava, descriptionRows.asJava).asJava
+//    )
     docxFileCreator.addTableWith(
-      List(titleRow.asJava, status.asJava, sprintName.asJava, labels.asJava, descriptionRows.asJava).asJava
+      List(titleRow.asJava,status.asJava, descriptionRows.asJava).asJava
     )
   }
 
